@@ -3,7 +3,8 @@
     margin: 0px;
     list-style: none;
     text-decoration: none;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, Arial, sans-serif;
+    font-weight: 500;
     box-sizing: border-box;
     color: var(--alba-black);
 }
@@ -24,6 +25,9 @@ video {
     max-width: 100%;
 }
 
+nav {
+    display: flex;
+}
 
 nav a {
     color: var(--alba-white);
@@ -38,22 +42,27 @@ h1 {
 }
 header {
     width: 100%;
-    height: auto;
+    height: 80px;
     background-color: var(--alba-black);
+}
+
+nav img {
+    height: 60px;
+    margin: 10px 60px;
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
-
+    margin-left: auto;
 }
 
 nav ul li {
     flex: 1;
     text-align: center;
-    font-size: 1.75em;
+    font-size: 1em;
     font-weight: bold;
-    padding: 10px;
+    padding: 100px;
     color: var(--alba-white);
 }
 
@@ -66,7 +75,7 @@ main {
 footer {
     width: 100%;
     background-color: var(--alba-black);
-    height: 50px;
+    height: 80px;
 }
 
 @media only screen and (min-width: 500px) {
@@ -79,7 +88,7 @@ footer {
         text-align: left;
         flex-grow: 0;
         flex-basis: auto;
-        padding: 15px 30px;
+        padding: 30px 30px;
     }
 }
 

@@ -12,12 +12,15 @@
 
 <body>
 
-    <header>
+<header>
         <nav>
+            <a href="/index.php"><img src="/images/logo.png" alt="Logo"></a>
             <ul>
-                <li><a href="/index.php"><img src="" alt="Home"></a></li>
-                <li><a href="/pages/about-us.php">About Us</a></li>
-                <li>Contact Us</li>
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/pages">Book Now</a></li>
+                <li><a href="/pages">My Bookings</a></li>
+                <li><a href="/pages">Itinerary</a></li>
+                <li><a href="/pages/about-us.php">About</a></li>
                 <?php 
                 if (isset($_SESSION['username'])) {
                     echo '<li>Welcome ' . $_SESSION['username'] . '</li>';

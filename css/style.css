@@ -1,0 +1,96 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    color: var(--alba-black);
+}
+
+:root {
+    --alba-blue-light: #3f6d8c;
+    --alba-blue-mid: #335871;
+    --alba-blue-dark: #274354;
+    --alba-white: #eeeee0;
+    --alba-black: #1e201d;
+}
+
+/*Makes the media take up the available page width*/
+img,
+object,
+embed,
+video {
+    max-width: 100%;
+}
+
+
+nav a {
+    color: var(--alba-white);
+}
+
+nav a:hover {
+    color: white;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+header {
+    width: 100%;
+    height: auto;
+    background-color: var(--alba-black);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    font-size: 1.75em;
+    font-weight: bold;
+    padding: 10px;
+    color: var(--alba-white);
+}
+
+main {
+    width: 100%;
+    background-color: var(--alba-white);
+    padding: 30px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--alba-black);
+    height: 50px;
+}
+
+@media only screen and (min-width: 500px) {
+    nav ul {
+        flex-direction: row;
+
+    }
+
+    nav ul li {
+        text-align: left;
+        flex-grow: 0;
+        flex-basis: auto;
+        padding: 15px 30px;
+    }
+}
+
+/*For bouncer JS*/
+
+.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+    font-size: 80%;
+}

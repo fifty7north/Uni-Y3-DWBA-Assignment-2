@@ -1,6 +1,6 @@
 <?php
 
-class CardView
+class TripView
 {
     public $depart_time;
     public $arrive_time;

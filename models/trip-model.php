@@ -8,7 +8,6 @@ class TripModel
     public function getAllTrips()
     {
         $date_select = $_POST['date-select'];
-        echo $date_select;
 
         $conn = connect();
 

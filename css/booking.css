@@ -1,17 +1,49 @@
-.trip-grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 10px;
+.date-select-form {
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
 }
 
-.trip-grid p{
+input[type=date]{
+    width: 400px;
+    height: 50px;
+    padding-left: 10px;
+    font: 1em sans-serif;
+    border: 2px solid var(--alba-blue-dark);
+    border-radius: 10px;
+    background-color: var(--alba-white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+input[type=submit] {
+    width: 150px;
+    height: 50px;
+    font: 1em sans-serif;
+    color: var(--alba-white);
+    border: 2px solid var(--alba-blue-dark);
+    border-radius: 10px;
+    background-color: var(--alba-blue-mid);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--alba-blue-light);
+}
+
+.trip-list {
+    display: block;
+    width: 100%;
+}
+
+.trip-list p{
     overflow: hidden;
     text-overflow: ellipsis; 
     height: 2.5em;
 }
 
 .ferry {
-    width: 20%;
+    width: 50%;
+    margin: auto;
 }

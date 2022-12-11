@@ -1,6 +1,6 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'] . "/models/trip-model.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . '/views/card-grid-view.php');
+include_once($_SERVER['DOCUMENT_ROOT'] . '/views/trip-list-view.php');
 
 class TripController
 {
@@ -17,7 +17,7 @@ class TripController
         $trips = $this->tripModel->getAllTrips();
 
         if (count($trips) > 0) {
-            $tripGrid = new CardGridView($trips);
+            $tripList = new TripListView($trips);
         } else {
             echo 'There are no trips in the database';
         }

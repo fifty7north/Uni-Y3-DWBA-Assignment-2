@@ -15,13 +15,13 @@
 
     <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/pages/header.php'); ?>
     <main>
-
-        <h1>Date Select:</h1>
-        <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-            <input type="date" name="date-select" min="2022-08-22" max="2022-09-04">
-            <input type="submit">
-        </form>
-
+        <div class="date-select-form">
+            <h1>Please Select a Date:</h1>
+            <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+                <input type="date" name="date-select" min="2022-08-22" max="2022-09-04" required>
+                <input type="submit" value="View Ferries">
+            </form>
+        </div>
         <?php
             include_once($_SERVER['DOCUMENT_ROOT'] . '/controllers/trip-controller.php');
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,7 +30,8 @@
                 if (empty($date_select)) {
                     echo "Please select a date";
                 } else {
-                    echo $date_select;
+                    $tripController = new TripController();
+                    $tripController->invoke();
 
                 }
               }
@@ -39,7 +40,7 @@
         <?php
 
 
-        $tripController = new TripController();
-        $tripController->invoke();
+        //$tripController = new TripController();
+        //$tripController->invoke();
         ?>
     </main>

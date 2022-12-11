@@ -30,7 +30,7 @@
         </ul>
     </nav>
     <?php
-    if (isset($_SESSION['username'])) {
+    if (isset($_SESSION['username']) && ($_SESSION['total_bookings'] > 5))  {
         echo '
         <div class="ceilidh-invite-link">
             As one of our loyal customers, we\'ve invited you to our end of season ceilidh! 

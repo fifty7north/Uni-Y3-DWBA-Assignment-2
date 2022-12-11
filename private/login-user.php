@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (password_verify($user_password, $account["user_password"])) {
         //session started on per page basis
         $_SESSION['username'] = $account['forename'];
+        $_SESSION['total_bookings'] = $account['total_bookings'];
         echo "Correct Password";
         header("refresh:0; url=/");
     } else {

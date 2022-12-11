@@ -12,11 +12,8 @@ class CardView
     public function __construct($depart_time, $arrive_time, $depart_from, $arrive_at, /*$seats_filled, $accessible_seat*/)
     {
         echo ' <div class="ferry">
-                    <img src="/images/logo.png" alt="A vector drawing of a book" title="' . $depart_time . '">
-                    <h2>' . $depart_time . '</h2>
-                    <h3>' . $arrive_time . '</h3>
-                    <h4>' . $depart_from . '</h4>
-                    <h4>' . $arrive_at . '</h4>
+                    <h2>' . substr($depart_time, 0, -3) . ' - ' . substr($arrive_time, 0, -3) . '</h2>
+                    <h2>' . $depart_from . ' - ' . $arrive_at . '</h2>
                 </div>';
     }
 }

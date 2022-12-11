@@ -1,0 +1,17 @@
+.trip-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+}
+
+.trip-grid p{
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    height: 2.5em;
+}
+
+.ferry {
+    width: 20%;
+}

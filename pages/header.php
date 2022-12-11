@@ -5,14 +5,14 @@
             <li><a href="/index.php">Home</a></li>
             <li><a href=<?php
             if (isset($_SESSION['username'])) {
-                echo '/pages';
+                echo '/pages/booking.php';
             } else {
                 echo '/pages/login.php';
             }
             ?>>Book Now</a></li>
             <li><a href=<?php
             if (isset($_SESSION['username'])) {
-                echo '/pages/booking.php';
+                echo '/pages';
             } else {
                 echo '/pages/login.php';
             }

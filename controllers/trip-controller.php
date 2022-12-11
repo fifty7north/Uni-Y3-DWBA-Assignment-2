@@ -19,7 +19,7 @@ class TripController
         if (count($trips) > 0) {
             $tripGrid = new CardGridView($trips);
         } else {
-            echo 'There are no books in the database';
+            echo 'There are no trips in the database';
         }
 
 

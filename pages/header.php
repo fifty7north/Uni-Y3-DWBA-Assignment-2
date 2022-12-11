@@ -12,7 +12,7 @@
             ?>>Book Now</a></li>
             <li><a href=<?php
             if (isset($_SESSION['username'])) {
-                echo '/pages';
+                echo '/pages/booking.php';
             } else {
                 echo '/pages/login.php';
             }

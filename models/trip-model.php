@@ -20,8 +20,14 @@ class TripModel
             while ($row = $result->fetch_assoc()) {
                 $nextTrip = new Trip(
                     $row["trip_ID"],
+                    $row["season_ID"],
                     $row["depart_date"],
                     $row["depart_time"],
+                    $row["arrive_time"],
+                    $row["depart_from"],
+                    $row["arrive_at"],
+                    $row["seats_filled"],
+                    $row["accessible_seats"]
                 );
 
                 array_push($AllTrips, $nextTrip);

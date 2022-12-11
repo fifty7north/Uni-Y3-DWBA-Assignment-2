@@ -23,6 +23,7 @@
         </form>
 
         <?php
+            include_once($_SERVER['DOCUMENT_ROOT'] . '/controllers/trip-controller.php');
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // collect value of input field
                 $date_select = $_POST['date-select'];
@@ -36,7 +37,7 @@
         ?>
 
         <?php
-        include_once($_SERVER['DOCUMENT_ROOT'] . '/controllers/trip-controller.php');
+
 
         $tripController = new TripController();
         $tripController->invoke();

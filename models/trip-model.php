@@ -7,11 +7,18 @@ class TripModel
     
     public function getAllTrips()
     {
+        $date_select = $_POST['date-select'];
+        echo $date_select;
 
         $conn = connect();
 
-        $sql = "SELECT * FROM ferry_trips WHERE depart_date = '2022-08-31'";
-        $result = $conn->query($sql);
+        //$sql = "SELECT * FROM ferry_trips WHERE depart_date = $date_select";
+        //$result = $conn->query($sql);
+
+        $stmt = $conn->prepare("SELECT * FROM ferry_trips WHERE depart_date = ?");
+        $stmt->bind_param("s", $date_select);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
         $AllTrips = array();
 

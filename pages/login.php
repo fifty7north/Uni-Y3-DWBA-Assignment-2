@@ -36,26 +36,23 @@
     </header>
     <main>
 
-        <h1>Please enter your log in details</h1>
-
         <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/private/login-user.php');
               include_once($_SERVER['DOCUMENT_ROOT'] . '/views/error-message-view.php'); ?>
 
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-            <a href="register.php">Register An Account Here</a> <br><br>
-            <label for="username">Username</label><br>
             <input id="username" name="user_email" type="email" value="<?php if (isset($user_email)) echo $user_email;?>" placeholder="email" minlength="3" required>
              <?php new ErrorMessage($emailErr); ?>
 
-            <label for="password">Password</label><br>
             <input id="password" name="user_password" type="password" placeholder="password" minlength="8" required>
             <?php new ErrorMessage($passwordErr); ?>
             
-            <input type="submit" value="Log In">
+            <input id="login-button" type="submit" value="Log In">
 
         </form>
 
+        <a class="button" href="register.php">Register An Account Here</a>
+        <a class="button" href="">Staff Login</a>
     </main>
     <footer>
 

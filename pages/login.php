@@ -30,6 +30,7 @@
                     echo '<li><a href="/pages/login.php">Log In</a></li>';
                 }
                 ?>
+                <li><a href="/pages/staff-login.php">Staff</a></li>
             </ul>
         </nav>
     </header>
@@ -51,7 +52,6 @@
         </form>
 
         <a class="button" href="register.php">Register An Account Here</a>
-        <a class="button" href="">Staff Login</a>
     </main>
     <footer>
 

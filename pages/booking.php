@@ -44,3 +44,8 @@
         //$tripController->invoke();
         ?>
     </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

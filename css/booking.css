@@ -1,3 +1,7 @@
+main {
+    min-height: calc(100vh - 160px);
+}
+
 .date-select-form {
     width: 50%;
     margin: 100px auto;
@@ -30,6 +34,10 @@ input[type=submit]:hover {
     cursor: pointer;
     color: white;
     background-color: var(--alba-blue-light);
+}
+
+.no-ferries {
+    text-align: center;
 }
 
 .trip-list {

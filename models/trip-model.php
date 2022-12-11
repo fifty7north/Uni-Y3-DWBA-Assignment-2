@@ -14,7 +14,7 @@ class TripModel
         //$sql = "SELECT * FROM ferry_trips WHERE depart_date = $date_select";
         //$result = $conn->query($sql);
 
-        $stmt = $conn->prepare("SELECT * FROM ferry_trips WHERE depart_date = ?");
+        $stmt = $conn->prepare("SELECT * FROM ferry_trips WHERE depart_date = ? AND seats_filled < 30");
         $stmt->bind_param("s", $date_select);
         $stmt->execute();
         $result = $stmt->get_result();

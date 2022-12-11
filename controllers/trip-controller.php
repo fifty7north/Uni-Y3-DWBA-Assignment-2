@@ -19,7 +19,9 @@ class TripController
         if (count($trips) > 0) {
             $tripList = new TripListView($trips);
         } else {
-            echo 'There are no trips in the database';
+            echo '
+            <div class="no-ferries">There are no available on this date. Please select another date.</div>
+            ';
         }
 
 

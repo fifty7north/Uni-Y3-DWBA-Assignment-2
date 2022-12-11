@@ -24,7 +24,6 @@
                 <li><a href="/pages/about-us.php">About</a></li>
                 <?php 
                 if (isset($_SESSION['username'])) {
-                    echo '<li>Welcome ' . $_SESSION['username'] . '</li>';
                     echo '<li><a href="/pages/logout.php">Log Out</a></li>';
                 } else {
                     echo '<li><a href="/pages/login.php">Log In</a></li>';

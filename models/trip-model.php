@@ -10,7 +10,7 @@ class TripModel
 
         $conn = connect();
 
-        $sql = "SELECT * FROM ferry_trips";
+        $sql = "SELECT * FROM ferry_trips WHERE depart_date = '2022-08-31'";
         $result = $conn->query($sql);
 
         $AllTrips = array();

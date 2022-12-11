@@ -17,7 +17,23 @@
     <main>
 
         <h1>Date Select:</h1>
-        <input type="date" name="date-select" min="2022-08-22" max="2022-09-04">
+        <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+            <input type="date" name="date-select" min="2022-08-22" max="2022-09-04">
+            <input type="submit">
+        </form>
+
+        <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // collect value of input field
+                $date_select = $_POST['date-select'];
+                if (empty($date_select)) {
+                    echo "Please select a date";
+                } else {
+                    echo $date_select;
+
+                }
+              }
+        ?>
 
         <?php
         include_once($_SERVER['DOCUMENT_ROOT'] . '/controllers/trip-controller.php');

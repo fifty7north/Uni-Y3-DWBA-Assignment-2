@@ -28,6 +28,7 @@
                     echo '<li><a href="/pages/login.php">Log In</a></li>';
                 }
                 ?>
+                <li><a href="/pages/staff-login.php">Staff</a></li>
             </ul>
         </nav>
     </header>

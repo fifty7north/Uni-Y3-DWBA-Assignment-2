@@ -70,11 +70,31 @@ nav ul li {
 }
 
 .ceilidh-invite-link {
+    display: flex;
     width: 100%;
     height: 40px;
     background-color: var(--alba-blue-dark);
     font: 1em sans-serif;
     color: var(--alba-white);
+    justify-content: center;
+    align-items: center;
+}
+
+.ceilidh-invite-link a {
+    padding: 3px;
+    margin: 0px 5px;
+    background-color: var(--alba-blue-mid);
+    border: 1px solid var(--alba-black);
+    border-radius: 5px;
+    font: 1em sans-serif;
+    color: var(--alba-white);
+    justify-content: center;
+    align-items: center;
+}
+
+.ceilidh-invite-link a:hover {
+    background-color: var(--alba-blue-light);
+    color: white;
 }
 
 main {

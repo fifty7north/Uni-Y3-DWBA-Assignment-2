@@ -29,4 +29,15 @@
             <li><a href="/pages/staff-login.php">Staff</a></li>
         </ul>
     </nav>
+    <?php
+    if (isset($_SESSION['username'])) {
+        echo '
+        <div class="ceilidh-invite-link">
+            As one of our loyal customers, we\'ve invited you to our end of season ceilidh! 
+            <a href="/pages">Click here</a>
+            to learn more.
+        </div>
+        ';
+    }
+    ?>
 </header>

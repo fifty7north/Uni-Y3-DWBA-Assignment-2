@@ -42,6 +42,9 @@ h1 {
 }
 header {
     width: 100%;
+}
+
+nav {
     height: 80px;
     background-color: var(--alba-black);
 }
@@ -63,6 +66,14 @@ nav ul li {
     font-size: 1.25em;
     font-weight: bold;
     padding: 100px;
+    color: var(--alba-white);
+}
+
+.ceilidh-invite-link {
+    width: 100%;
+    height: 40px;
+    background-color: var(--alba-blue-dark);
+    font: 1em sans-serif;
     color: var(--alba-white);
 }
 

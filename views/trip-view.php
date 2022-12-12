@@ -15,7 +15,6 @@ class TripView
                     <div class="info">
                         <p>' . substr($depart_time, 0, -3) . ' - ' . substr($arrive_time, 0, -3) . '</p>
                         <p>' . $route_name . '</p>
-                        <p>' . $trip_ID . '</p>
                     </div>
                     <form method="post" action="booking-payment.php" class="ticket-form">
                         <h1>Single</h1>
@@ -59,6 +58,7 @@ class TripView
                         </div>
                         ":"") . '
                         <input name="trip_ID" id="hidden" value= "' . $trip_ID . '" readonly>
+                        <input name="route_name" id="hidden" value= "' . $route_name . '" readonly>
                         <input type="submit">
                     </form>
                 </div>';

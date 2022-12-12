@@ -18,7 +18,7 @@
         <div class="date-select-form">
             <h1>Please Select a Date:</h1>
             <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-                <input type="date" name="date-select" min="2022-08-22" max="2022-09-04" required>
+                <input type="date" name="date-select" min="2022-08-22" max="2022-09-18" required>
                 <input type="submit" value="View Ferries">
             </form>
         </div>

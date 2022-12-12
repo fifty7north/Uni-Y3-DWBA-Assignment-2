@@ -8,7 +8,7 @@ $child_return = $_POST["child-return"];
 $baby_single = $_POST["baby-single"];
 $baby_return = $_POST["baby-return"];
 $trip_ID = $_POST['trip_ID'];
-$route_name = 'test';
+$route_name = $_POST['route_name'];
 
 echo "adult-single: ", $adult_single, "<br>";
 echo "adult-return: ", $adult_return, "<br>";
@@ -18,6 +18,6 @@ echo "child-single: ", $child_single, "<br>";
 echo "child-return: ", $child_return, "<br>";
 echo "baby-single: ", $baby_single, "<br>";
 echo "baby-return: ", $baby_return, "<br>";
-echo "trip ID: ", $trip_ID;
+echo "trip ID: ", $trip_ID, "<br>";
 echo "route name: ", $route_name;
 ?>

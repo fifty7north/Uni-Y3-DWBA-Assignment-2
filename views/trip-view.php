@@ -5,17 +5,16 @@ class TripView
     public $trip_ID;
     public $depart_time;
     public $arrive_time;
-    public $depart_from;
-    public $arrive_at;
+    public $route_name;
     public $seats_filled;
     public $accessible_seats;
 
-    public function __construct($trip_ID, $depart_time, $arrive_time, $depart_from, $arrive_at, $seats_filled, $accessible_seats)
+    public function __construct($trip_ID, $depart_time, $arrive_time, $route_name, $seats_filled, $accessible_seats)
     {   
         echo '  <div class="ferry">
                     <div class="info">
                         <p>' . substr($depart_time, 0, -3) . ' - ' . substr($arrive_time, 0, -3) . '</p>
-                        <p>' . $depart_from . ' - ' . $arrive_at . '</p>
+                        <p>' . $route_name . '</p>
                         <p>' . $trip_ID . '</p>
                     </div>
                     <form method="post" action="booking-payment.php" class="ticket-form">

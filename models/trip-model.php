@@ -30,8 +30,7 @@ class TripModel
                     $row["depart_date"],
                     $row["depart_time"],
                     $row["arrive_time"],
-                    $row["depart_from"],
-                    $row["arrive_at"],
+                    $row["route_name"],
                     $row["seats_filled"],
                     $row["accessible_seats"]
                 );

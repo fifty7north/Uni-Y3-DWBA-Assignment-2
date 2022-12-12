@@ -1,7 +1,7 @@
 <div class="ferry">
     <div class="info">
         <p>' . substr($depart_time, 0, -3) . ' - ' . substr($arrive_time, 0, -3) . '</p>
-        <p>' . $depart_from . ' - ' . $arrive_at . '</p>
+        <p>' . $route_name . '</p>
     </div>
     <form class="ticket-form">
         <h1>Single</h1>

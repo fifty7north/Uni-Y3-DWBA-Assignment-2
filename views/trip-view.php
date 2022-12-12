@@ -59,6 +59,7 @@ class TripView
                             <input type='checkbox'>
                         </div>
                         ":"") . '
+                        <input name="trip_ID" id="hidden" value= "' . $trip_ID . '" readonly>
                         <input type="submit">
                     </form>
                 </div>';

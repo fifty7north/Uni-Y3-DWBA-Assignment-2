@@ -7,6 +7,7 @@ $child_single = $_POST["child-single"];
 $child_return = $_POST["child-return"];
 $baby_single = $_POST["baby-single"];
 $baby_return = $_POST["baby-return"];
+$trip_ID = $_POST['trip_ID'];
 
 echo "adult-single: ", $adult_single, "<br>";
 echo "adult-return: ", $adult_return, "<br>";

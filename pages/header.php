@@ -17,7 +17,7 @@
                 echo '/pages/login.php';
             }
             ?>>My Bookings</a></li>
-            <li><a href="/pages">Itinerary</a></li>
+            <li><a href="/pages/itinerary.php">Itinerary</a></li>
             <li><a href="/pages/about-us.php">About</a></li>
             <?php 
             if (isset($_SESSION['username'])) {

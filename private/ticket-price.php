@@ -72,5 +72,13 @@
     $baby_return_price = 0;
 
     $total_price = ($adult_single_price * $adult_single) + ($adult_return_price * $adult_return) + ($teen_single_price * $teen_single) + ($teen_return_price * $teen_return) + ($child_single_price * $child_single) + ($child_return_price * $child_return) + ($baby_single_price * $baby_single) + ($baby_return_price * $baby_return);
-    //echo 'total price: ', $total_price;        
+    //echo 'total price: ', $total_price;  
+
+    //accessible seat check
+    if (isset($_POST['accessible_seat'])) {
+        $accessible_seat = 0;
+    } else {
+        $accessible_seat = 1;
+    }
+    
 ?>

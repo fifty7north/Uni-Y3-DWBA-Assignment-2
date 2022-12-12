@@ -54,7 +54,7 @@ class TripView
                         ' . (($accessible_seats == 1)?"
                         <div class='accessible-seat-noti'>
                             <label>Accessible seating is available on this trip. Tick the checkbox below if you require an accessible seat</label><br>
-                            <input type='checkbox'>
+                            <input name ='accessible_seat' type='checkbox'>
                         </div>
                         ":"") . '
                         <input name="trip_ID" id="hidden" value= "' . $trip_ID . '" readonly>

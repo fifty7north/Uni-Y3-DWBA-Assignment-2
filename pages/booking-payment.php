@@ -59,8 +59,8 @@
             
             <p>Total Price: £<?php echo number_format((float)$total_price, 2, '.', '');;?></p>
         </div>
-        <form method="post" action="../index.php">
-            <input name='trip_ID 'type=number value=<?php echo $trip_ID;?> readonly>
+        <form method="post" action="/pages/confirm.php">
+            <input name='trip_ID' type=number value=<?php echo $trip_ID;?> readonly>
             <input name='accessible_seat' type=number value=<?php echo $accessible_seat;?> readonly>
             <input name='seats_remaining' type=number value=<?php echo $seats_remaining;?> readonly>
             <input name='total_price' type=number value=<?php echo number_format((float)$total_price, 2, '.', '');;?> readonly>

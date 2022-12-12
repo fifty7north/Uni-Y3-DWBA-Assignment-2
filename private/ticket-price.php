@@ -79,6 +79,5 @@
         $accessible_seat = 0;
     } else {
         $accessible_seat = 1;
-    }
-    
+    }  
 ?>

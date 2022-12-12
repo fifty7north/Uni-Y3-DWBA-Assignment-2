@@ -37,29 +37,43 @@
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            $seats_remaining = 30 + $row["seats_filled"] - $total_tickets;
-            echo "seats remaining: ", $seats_remaining;
+            $seats_remaining = 30 - $row["seats_filled"] - $total_tickets;
+            echo "seats remaining: ", $seats_remaining, '<br>';
         }
     } else {
         echo "Error: Failed to generate results. Please return to the booking page and resubmit your ticket info";
     }
 
-    $conn = connect();
-
-    $sql = "SELECT payment_ID, price FROM price";
-    $price_result = $conn->query($sql);
-
-    $conn->close();
-
-    if ($price_result->num_rows > 0) {
-        // output data of each row
-        while($row = $price_result->fetch_assoc()) {
-            echo "<br>price id: ". $row["payment_ID"]. " - Price: ". $row["price"]. "";
-        }
-    } else {
-        echo "0 results";
+    if($route_name == 'Mallaig - Eigg' OR $route_name == 'Eigg - Mallaig') {
+        $adult_single_price = 12.60;
+        $adult_return_price = 18.00;
+    }
+    else if($route_name == 'Eigg - Muck' OR $route_name == 'Muck - Eigg') {
+        $adult_single_price = 7.00;
+        $adult_return_price = 10.00;
+    }
+    else if($route_name == 'Eigg - Rum' OR $route_name == 'Rum - Eigg') {
+        $adult_single_price = 11.20;
+        $adult_return_price = 16.00;
+    }
+    else {
+        $adult_single_price = 16.80;
+        $adult_return_price = 24.00;        
     }
 
+    $teen_single_price = 7.00;
+    $teen_return_price = 10.00;
+    $child_single_price = 4.90;
+    $child_return_price = 7.00;
+    $baby_single_price = 0;
+    $baby_return_price = 0;
 
+    echo $adult_single_price;
+    echo '<br>';
+    echo $adult_return_price;
+
+    $total_price = ($adult_single_price * $adult_single) + ($adult_return_price * $adult_return) + ($teen_single_price * $teen_single) + ($teen_return_price * $teen_return) + ($child_single_price * $child_single) + ($child_return_price * $child_return) + ($baby_single_price * $baby_single) + ($baby_return_price * $baby_return);
+    echo '<br>';
+    echo $total_price;
         
 ?>

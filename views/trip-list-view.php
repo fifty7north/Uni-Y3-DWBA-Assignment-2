@@ -11,7 +11,7 @@ class TripListView
         echo '<section class="trip-list">';
 
         foreach ($arrayOfTrips as $singleTrip) {
-            $newTrip = new TripView($singleTrip->depart_time, $singleTrip->arrive_time, $singleTrip->depart_from, $singleTrip->arrive_at, $singleTrip->seats_filled);
+            $newTrip = new TripView($singleTrip->depart_time, $singleTrip->arrive_time, $singleTrip->depart_from, $singleTrip->arrive_at, $singleTrip->seats_filled, $singleTrip->accessible_seats);
         }
 
         echo '</section>';

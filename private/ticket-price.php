@@ -13,6 +13,7 @@
 
     $total_tickets = $adult_single + $adult_return + $teen_single + $teen_return + $child_single + $child_return + $baby_single + $baby_return;
 
+    /*
     echo "adult-single: ", $adult_single, "<br>";
     echo "adult-return: ", $adult_return, "<br>";
     echo "teen-single: ", $teen_single, "<br>";
@@ -24,6 +25,7 @@
     echo "trip ID: ", $trip_ID, "<br>";
     echo "route name: ", $route_name, "<br>";
     echo "total tickets: ", $total_tickets, "<br>";
+    */
 
     $conn = connect();
 
@@ -38,12 +40,13 @@
         // output data of each row
         while($row = $result->fetch_assoc()) {
             $seats_remaining = 30 - $row["seats_filled"] - $total_tickets;
-            echo "seats remaining: ", $seats_remaining, '<br>';
+            //echo "seats remaining: ", $seats_remaining, '<br>';
         }
     } else {
         echo "Error: Failed to generate results. Please return to the booking page and resubmit your ticket info";
     }
 
+    //scuffed price list lmao
     if($route_name == 'Mallaig - Eigg' OR $route_name == 'Eigg - Mallaig') {
         $adult_single_price = 12.60;
         $adult_return_price = 18.00;
@@ -68,12 +71,6 @@
     $baby_single_price = 0;
     $baby_return_price = 0;
 
-    echo $adult_single_price;
-    echo '<br>';
-    echo $adult_return_price;
-
     $total_price = ($adult_single_price * $adult_single) + ($adult_return_price * $adult_return) + ($teen_single_price * $teen_single) + ($teen_return_price * $teen_return) + ($child_single_price * $child_single) + ($child_return_price * $child_return) + ($baby_single_price * $baby_single) + ($baby_return_price * $baby_return);
-    echo '<br>';
-    echo $total_price;
-        
+    //echo 'total price: ', $total_price;        
 ?>

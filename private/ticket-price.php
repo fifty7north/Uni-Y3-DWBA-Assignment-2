@@ -27,20 +27,39 @@
 
     $conn = connect();
 
-        $stmt = $conn->prepare("SELECT * FROM ferry_trips WHERE trip_ID = ? LIMIT 1");
-        $stmt->bind_param("s", $trip_ID);
-        $stmt->execute();
-        $result = $stmt->get_result(); // get the mysqli result
+    $stmt = $conn->prepare("SELECT * FROM ferry_trips WHERE trip_ID = ? LIMIT 1");
+    $stmt->bind_param("s", $trip_ID);
+    $stmt->execute();
+    $result = $stmt->get_result(); // get the mysqli result
 
-        $conn->close();
+    $conn->close();
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                $seats_remaining = 30 + $row["seats_filled"] - $total_tickets;
-                echo "seats remaining: ", $seats_remaining;
-            }
-        } else {
-            echo "Error: Failed to generate results. Please return to the booking page and resubmit your ticket info";
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $seats_remaining = 30 + $row["seats_filled"] - $total_tickets;
+            echo "seats remaining: ", $seats_remaining;
         }
+    } else {
+        echo "Error: Failed to generate results. Please return to the booking page and resubmit your ticket info";
+    }
+
+    $conn = connect();
+
+    $sql = "SELECT payment_ID, price FROM price";
+    $price_result = $conn->query($sql);
+
+    $conn->close();
+
+    if ($price_result->num_rows > 0) {
+        // output data of each row
+        while($row = $price_result->fetch_assoc()) {
+            echo "<br>price id: ". $row["payment_ID"]. " - Price: ". $row["price"]. "";
+        }
+    } else {
+        echo "0 results";
+    }
+
+
+        
 ?>

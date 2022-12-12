@@ -27,10 +27,14 @@
 
     }
 
-    echo $trip_ID;    echo'<br>';
-    echo $accessible_seat;    echo'<br>';
-    echo $seats_filled;    echo'<br>';
-    echo $total_price;    echo'<br>';
+    //insert into booking table
+    $conn = connect();
+
+    $stmt = $conn->prepare("INSERT INTO bookings (trip_ID, tickets, price, accessible_seat) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $trip_ID, $seats_filled, $total_price, $accessible_seat);
+    $stmt->execute();
+
+    $conn->close();
 
     //update trip table
     $conn = connect();
@@ -41,4 +45,11 @@
 
     $conn->close();
 
+    //get customer total bookings and update it
+    $conn = connect();
+    $stmt = $conn->prepare("SELECT accessible_seats FROM ferry_trips WHERE trip_ID = ? LIMIT 1");
+    $stmt->bind_param("s", $trip_ID);
+    $stmt->execute();
+    $result = $stmt->get_result(); // get the mysqli result
+    $conn->close();
 ?>

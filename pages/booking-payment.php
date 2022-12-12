@@ -1,26 +1,28 @@
-<?php
-$adult_single = $_POST["adult-single"];
-$adult_return = $_POST["adult-return"];
-$teen_single = $_POST["teen-single"];
-$teen_return = $_POST["teen-return"];
-$child_single = $_POST["child-single"];
-$child_return = $_POST["child-return"];
-$baby_single = $_POST["baby-single"];
-$baby_return = $_POST["baby-return"];
-$trip_ID = $_POST['trip_ID'];
-$route_name = $_POST['route_name'];
+<?php session_start(); ?>
 
-$total_tickets = $adult_single + $adult_return + $teen_single + $teen_return + $child_single + $child_return + $baby_single + $baby_return;
+<!DOCTYPE html>
+<html lang="en">
 
-echo "adult-single: ", $adult_single, "<br>";
-echo "adult-return: ", $adult_return, "<br>";
-echo "teen-single: ", $teen_single, "<br>";
-echo "teen-return: ", $teen_return, "<br>";
-echo "child-single: ", $child_single, "<br>";
-echo "child-return: ", $child_return, "<br>";
-echo "baby-single: ", $baby_single, "<br>";
-echo "baby-return: ", $baby_return, "<br>";
-echo "trip ID: ", $trip_ID, "<br>";
-echo "route name: ", $route_name, "<br>";
-echo "total tickets: ", $total_tickets, "<br>";
-?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alba Cruises</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . '/pages/header.php'); ?>
+    <main>
+    <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/private/ticket-price.php'); ?>    
+    </main>
+    <footer>
+
+
+    </footer>
+
+</body>
+
+</html>

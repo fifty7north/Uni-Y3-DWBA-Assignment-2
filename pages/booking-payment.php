@@ -24,42 +24,39 @@
                 if ($adult_single > 0) {
                     echo '<p>Adult single tickets: ' . $adult_single . '</p>';
                 }
-            ?>
-            <?php
+
                 if ($adult_return > 0) {
                     echo '<p>Adult return tickets: ' . $adult_return . '</p>';
                 }
-            ?>
-            <?php
+
                 if ($teen_single > 0) {
                     echo '<p>Teen single tickets: ' . $teen_single . '</p>';
                 }
-            ?>
-            <?php
+
                 if ($teen_return > 0) {
                     echo '<p>Teen return tickets: ' . $teen_return . '</p>';
                 }
-            ?>
-            <?php
+
                 if ($child_single > 0) {
                     echo '<p>Child single tickets: ' . $child_single . '</p>';
                 }
-            ?>
-            <?php
+                
                 if ($child_return > 0) {
                     echo '<p>Child return tickets: ' . $child_return . '</p>';
                 }
-            ?>
-            <?php
+
                 if ($baby_single > 0) {
                     echo '<p>Baby single tickets: ' . $baby_single . '</p>';
                 }
-            ?>
-            <?php
+
                 if ($baby_return > 0) {
                     echo '<p>Baby return tickets: ' . $baby_return . '</p>';
                 }
+                if ($accessible_seat == 0) {
+                    echo '<p>Require accessible seating</p>';
+                }
             ?>
+            
             <p>Total Price: £<?php echo number_format((float)$total_price, 2, '.', '');;?></p>
         </div>
         <form method="post" action="../index.php">
@@ -67,7 +64,7 @@
             <input name='accessible_seat' type=number value=<?php echo $accessible_seat;?> readonly>
             <input name='seats_remaining' type=number value=<?php echo $seats_remaining;?> readonly>
             <input name='total_price' type=number value=<?php echo number_format((float)$total_price, 2, '.', '');;?> readonly>
-            <input type=submit>
+            <input type=submit value="confirm and pay">
         </form>
     </main>
     <footer>

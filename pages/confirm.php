@@ -19,7 +19,7 @@
 
         <h1>Booking Confirmed!</h1>
         <a href="/pages">View My Bookings</a>
-        <a href="/page">View Boarding Slip</a>
+        <a href="/pages">View Boarding Slip</a>
     </main>
     <footer>
 

@@ -8,6 +8,7 @@ class BookingListView
 
     public function __construct($arrayOfbookings)
     {
+        echo '<h1>My Bookings:</h1>';
         echo '<section class="booking-list">';
 
         foreach ($arrayOfbookings as $singlebooking) {

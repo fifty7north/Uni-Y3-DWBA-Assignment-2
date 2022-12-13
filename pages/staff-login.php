@@ -22,10 +22,10 @@
 
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-            <input id="username" name="staff_email" type="email" value="<?php if (isset($staff_email)) echo $staff_email;?>" placeholder="email" minlength="3" required>
+            <input id="username" name="username" type="email" value="<?php if (isset($username)) echo $username;?>" placeholder="email" minlength="3" required>
              <?php new ErrorMessage($emailErr); ?>
 
-            <input id="password" name="staff_password" type="password" placeholder="password" minlength="8" required>
+            <input id="password" name="password" type="password" placeholder="password" minlength="8" required>
             <?php new ErrorMessage($passwordErr); ?>
             
             <input id="login-button" type="submit" value="Log In">

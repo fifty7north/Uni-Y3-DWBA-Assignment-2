@@ -46,3 +46,8 @@ main {
 .buttons a:hover {
     background-color: white;
 }
+
+.no-bookings {
+    margin: 100px auto;
+    text-align: center;
+}

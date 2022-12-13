@@ -20,7 +20,7 @@ class BookingController
             $bookingList = new BookingListView($bookings);
         } else {
             echo '
-            <div class="no-ferries">There are no available on this date. Please select another date.</div>
+            <h1 class="no-bookings">You have no bookings</h1>
             ';
         }
 

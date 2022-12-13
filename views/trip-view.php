@@ -59,7 +59,7 @@ class TripView
                         ":"") . '
                         <input name="trip_ID" id="hidden" value= "' . $trip_ID . '" readonly>
                         <input name="route_name" id="hidden" value= "' . $route_name . '" readonly>
-                        <input type="submit">
+                        <input id="form_submit"type="submit">
                     </form>
                 </div>';
     }

@@ -15,11 +15,9 @@
 
     <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/pages/header.php'); ?>
     <main>
-        <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/private/insert-booking.php'); ?>
-
-        <h1>Booking Confirmed!</h1>
-        <a href="/pages/my-bookings.php">View My Bookings</a>
-        <a href="/pages">View Boarding Slip</a>
+    <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/private/delete-booking.php'); ?> 
+        <h1>Booking Deleted!</h1>
+        <a href="/pages/my-bookings.php">Return to My Bookings</a>
     </main>
     <footer>
 

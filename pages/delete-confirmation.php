@@ -25,10 +25,10 @@
             <p>Price: £<?php echo $price;?></p>
         </div>
         <form method="post" action="/pages/delete-booking.php">
-            <input name="booking_ID" id="hidden" value= "' . $booking_ID . '" readonly>
-            <input name="trip_ID" id="hidden" value= "' . $trip_ID . '" readonly>
-            <input name="tickets" id="hidden" value= "' . $tickets . '" readonly>
-            <input name="price" id="hidden" value= "' . $price . '" readonly>
+            <input name="booking_ID" id="hidden" value= "<?php echo $booking_ID;?>" readonly>
+            <input name="trip_ID" id="hidden" value= "<?php echo $trip_ID;?>" readonly>
+            <input name="tickets" id="hidden" value= "<?php echo $tickets;?>" readonly>
+            <input name="price" id="hidden" value= "<?php echo $price;?>" readonly>
             <input type=submit value=Delete class="submit"></input>
     </form>
     </main>

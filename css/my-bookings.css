@@ -1,3 +1,48 @@
 main {
     min-height: calc(100vh - 160px);
 }
+
+.booking {
+    width: 30%;
+    margin: auto;
+    background-color: var(--alba-blue-mid);
+    border: 2px solid var(--alba-blue-dark);
+}
+
+.booking-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+}
+
+#left {
+    text-align: left;
+    font: 1em sans-serif;
+    color: var(--alba-white);
+}
+
+#right {
+    text-align: right;
+    font: 1em sans-serif;
+    color: var(--alba-white);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.buttons a {
+    width: 100px;
+    padding: 10px;
+    margin: auto auto 20px auto;
+    text-align: center;
+    background-color: var(--alba-white);
+    border: 2px solid var(--alba-blue-dark);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.buttons a:hover {
+    background-color: white;
+}

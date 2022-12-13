@@ -1,12 +1,12 @@
 <?php
 
 class Staff {   
-    public $email;   
+    public $username;   
     public $password;   
      
-    public function __construct($email, $password)   
+    public function __construct($username, $password)   
     {   
-        $this->email = $email;   
+        $this->username = $username;   
         $this->password = $password;   
     }
 }

@@ -11,20 +11,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $staffModel = new StaffModel();
 
-    $staff_email = sanitising\validateInput($_POST["staff_email"]);
-    $staff_password = sanitising\validateInput($_POST["staff_password"]);
+    $username = sanitising\validateInput($_POST["username"]);
+    $password = sanitising\validateInput($_POST["password"]);
 
     //check if password is long enough
-    if (!validation\InputIsMinLength($staff_password, 8)) {
+    if (!validation\InputIsMinLength($password, 8)) {
         $passwordErr = "* password less than 8 characters in length";
     }
 
-    if (!validation\EmailIsAppropriate($staff_email)) {
+    if (!validation\EmailIsAppropriate($username)) {
         $emailErr = "* Invalid email format";
     }
 
     //check if details in the database
-    $result = $staffModel->getFirstUserUsingEmail($staff_email);
+    $result = $staffModel->getFirstUserUsingEmail($username);
 
     //if query was not successful
     if ($result == false) {
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $account = $result->fetch_assoc();
 
-    if (password_verify($staff_password, $account["staff_password"])) {
+    if (password_verify($password, $account["password"])) {
         echo "Correct Password";
         header("refresh:0; url=/pages/staff-report.php");
     } else {

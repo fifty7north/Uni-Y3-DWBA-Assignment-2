@@ -20,35 +20,35 @@ class TripView
                         <h1>Single</h1>
                         <h1>Return</h1>
                         <div>
-                            <label>Adult: </label><br>
+                            <label>Adult</label><br>
                             <input name ="adult-single" type="number" value=0 min=0 max = ' . 30 - $seats_filled .'>
                         </div>
                         <div>
-                            <label>Adult: </label><br>
+                            <label>Adult</label><br>
                             <input name ="adult-return" type="number" value=0 min=0 max = ' . 30 - $seats_filled .'>
                         </div>
                         <div>
-                            <label>Ages 11-16: </label><br>
+                            <label>Ages 11-16</label><br>
                             <input name ="teen-single" type="number" value=0 min=0 max = ' . 30 - $seats_filled .'>
                         </div>
                         <div>
-                            <label>Ages 11-16: </label><br>
+                            <label>Ages 11-16</label><br>
                             <input name ="teen-return" type="number" value=0 min=0 max = ' . 30 - $seats_filled .'>
                         </div>
                         <div>
-                            <label>Ages 3-10: </label><br>
+                            <label>Ages 3-10</label><br>
                             <input name ="child-single" type="number" value=0 min=0 max = ' . 30 - $seats_filled .'>
                         </div>
                         <div>
-                            <label>Ages 3-10: </label><br>
+                            <label>Ages 3-10</label><br>
                             <input name ="child-return" type="number" value=0 min=0 max = ' . 30 - $seats_filled .'>
                         </div>
                         <div>
-                            <label>Ages 0-2: Free</label><br>
+                            <label>Ages 0-2</label><br>
                             <input name ="baby-single" type="number" value=0 min=0 max = ' . 30 - $seats_filled .'>
                         </div>
                         <div>
-                            <label>Ages 0-2: Free</label><br>
+                            <label>Ages 0-2</label><br>
                             <input name ="baby-return" type="number" value=0 min=0 max = ' . 30 - $seats_filled .'>
                         </div>
                         ' . (($accessible_seats == 1)?"

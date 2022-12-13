@@ -18,7 +18,7 @@
         <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/private/insert-booking.php'); ?>
 
         <h1>Booking Confirmed!</h1>
-        <a href="/pages">View My Bookings</a>
+        <a href="/pages/my-bookings.php">View My Bookings</a>
         <a href="/pages">View Boarding Slip</a>
     </main>
     <footer>

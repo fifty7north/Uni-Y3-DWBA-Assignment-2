@@ -36,13 +36,6 @@
                 }
               }
         ?>
-
-        <?php
-
-
-        //$tripController = new TripController();
-        //$tripController->invoke();
-        ?>
     </main>
     <footer>
 

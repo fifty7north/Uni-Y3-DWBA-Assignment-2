@@ -30,7 +30,6 @@
         echo "Error: Failed to generate results. Please return to the booking page and resubmit your ticket info";
     }
     $seats_after_delete = $seats_filled - $tickets;
-    echo $seats_after_delete;
 
     //update trip table
     $conn = connect();

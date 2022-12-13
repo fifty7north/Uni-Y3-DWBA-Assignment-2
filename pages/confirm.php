@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/confirm.css">
 </head>
 
 <body>
@@ -17,9 +17,9 @@
     <main>
         <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/private/insert-booking.php'); ?>
 
-        <h1>Confirmed!</h1>
-
-
+        <h1>Booking Confirmed!</h1>
+        <a href="/pages">View My Bookings</a>
+        <a href="/page">View Boarding Slip</a>
     </main>
     <footer>
 

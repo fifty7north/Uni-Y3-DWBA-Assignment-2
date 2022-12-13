@@ -40,32 +40,39 @@ nav a:hover {
 h1 {
     margin-bottom: 30px;
 }
+
 header {
     width: 100%;
 }
 
 nav {
-    height: 80px;
+    display: block;
     background-color: var(--alba-black);
 }
 
+nav > ul{
+    width: 100%;
+}
+
 nav img {
+    display: flex;
     height: 60px;
-    margin: 10px 60px;
+    margin: auto;
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
     margin-left: auto;
+    justify-content: center;
 }
 
 nav ul li {
     flex: 1;
+    padding: 10px;
     text-align: center;
     font-size: 1.25em;
     font-weight: bold;
-    padding: 100px;
     color: var(--alba-white);
 }
 
@@ -109,8 +116,13 @@ footer {
     height: 80px;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 1000px) {
+    nav {
+        display: flex;
+    }
+    
     nav ul {
+        display: flex;
         flex-direction: row;
 
     }
@@ -120,6 +132,11 @@ footer {
         flex-grow: 0;
         flex-basis: auto;
         padding: 30px 30px;
+    }
+
+    nav img {
+        height: 60px;
+        margin: 10px 60px;
     }
 }
 

@@ -24,6 +24,7 @@
                     echo '/pages/login.php';
                 }
             ?>>Book Now</a>
+            <span class="spacer"></span>
     </main>
     <footer>
 

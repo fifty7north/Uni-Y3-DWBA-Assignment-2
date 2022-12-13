@@ -16,7 +16,14 @@
 
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/pages/header.php'); ?>
     <main>
-
+            <h1>Discover the Beauty of the Small Islands with Alba Cruises</h1>
+            <a href=<?php
+                if (isset($_SESSION['user_ID'])) {
+                    echo '/pages/booking.php';
+                } else {
+                    echo '/pages/login.php';
+                }
+            ?>>Book Now</a>
     </main>
     <footer>
 

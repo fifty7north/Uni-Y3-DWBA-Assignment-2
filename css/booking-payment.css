@@ -1,0 +1,47 @@
+main {
+    min-height: calc(100vh - 160px);
+}
+
+h1 {
+    margin: 100px 0px 50px 0px;
+    text-align: center;
+}
+
+.info {
+    margin-bottom: 50px;
+}
+
+p {
+    text-align: center;
+    font: 1em sans-serif;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hidden {
+    width: 0px;
+    height: 0px;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type=submit] {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font: 1em sans-serif;
+    color: var(--alba-white);
+    border: 2px solid var(--alba-blue-dark);
+    border-radius: 10px;
+    background-color: var(--alba-blue-mid);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+input[type=submit]:hover {
+    color: white;
+    background-color: var(--alba-blue-light);
+}

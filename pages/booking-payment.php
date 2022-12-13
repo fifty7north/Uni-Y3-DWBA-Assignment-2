@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alba Cruises</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/booking-payment.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <main>
     <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/private/ticket-price.php'); ?> 
         <h1>Confirm your booking details:</h1>
-        <div>
+        <div class='info'>
             <p>Route: <?php echo $route_name;?></p>   
             <?php
                 if ($adult_single > 0) {
@@ -54,12 +54,12 @@
             <p>Total Price: £<?php echo number_format((float)$total_price, 2, '.', '');;?></p>
         </div>
         <form method="post" action="/pages/confirm.php">
-            <input name='trip_ID' type=number value=<?php echo $trip_ID;?> readonly>
-            <input name='accessible_seat' type=number value=<?php echo $accessible_seat;?> readonly>
-            <input name='seats_remaining' type=number value=<?php echo $seats_remaining;?> readonly>
-            <input name='total_tickets' type=number value=<?php echo $total_tickets;?> readonly>
-            <input name='total_price' type=number value=<?php echo number_format((float)$total_price, 2, '.', '');;?> readonly>
-            <input type=submit value="confirm and pay">
+            <input name='trip_ID' id='hidden' type=number value=<?php echo $trip_ID;?> readonly>
+            <input name='accessible_seat' id='hidden' type=number value=<?php echo $accessible_seat;?> readonly>
+            <input name='seats_remaining' id='hidden' type=number value=<?php echo $seats_remaining;?> readonly>
+            <input name='total_tickets' id='hidden' type=number value=<?php echo $total_tickets;?> readonly>
+            <input name='total_price' id='hidden' type=number value=<?php echo number_format((float)$total_price, 2, '.', '');;?> readonly>
+            <input type=submit value="Confirm and Pay">
         </form>
     </main>
     <footer>

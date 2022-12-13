@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create an Account</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/register-user.css">
     <script defer src="/scripts/bouncer.min.js"></script>
 </head>
 
@@ -16,7 +17,7 @@
     <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/pages/header.php'); ?>
     <main>
 
-        <h1>Please enter your log in details</h1>
+        <h1>Please enter the following details to create an account</h1>
 
         <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/private/register-user.php');
               include_once($_SERVER['DOCUMENT_ROOT'] . '/views/error-message-view.php'); ?>
@@ -27,20 +28,23 @@
          Not including an action attribute opens the risk of a click jacking attack: http://blog.andlabs.org/2010/03/bypassing-csrf-protections-with.html -->
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-            <input id="forename" name="forename" type="text" value="<?php if (isset($forename)) echo $forename; ?>" placeholder="Forename" minlength="1" required><br>
-
-            <input id="surname" name="surname" type="text" value="<?php if (isset($surname)) echo $surname; ?>" placeholder="Surname" minlength="1" required><br>
-
+            <input id="forename" name="forename" type="text" value="<?php if (isset($forename)) echo $forename; ?>" placeholder="forename" minlength="1" required>
+            <br>
+            <br>
+            <br>
+            <input id="surname" name="surname" type="text" value="<?php if (isset($surname)) echo $surname; ?>" placeholder="surname" minlength="1" required>
+            <br>
+            <br>
+            <br>
             <input id="username" name="user_email" type="email" value="<?php if (isset($user_email)) echo $user_email; ?>" placeholder="email" minlength="3" required>
             <?php new ErrorMessage($emailErr); ?>
-
             <input id="password" name="user_password" type="password" placeholder="password" minlength="8" required><br>
             <?php new ErrorMessage($passwordErr); ?>
 
             <input id="password2" name="user_password2" type="password" placeholder="confirm password" minlength="8" required data-bouncer-match="#password">
             <?php new ErrorMessage($password2Err); ?>
 
-            <input type="submit" value="Create Account">
+            <input type="submit" value="Create Account" class="register-button">
 
         </form>
 

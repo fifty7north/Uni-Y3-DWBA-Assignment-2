@@ -43,7 +43,7 @@
     $conn->close();
 
     //get customer total bookings and update it
-    $updated_total_bookings = $_SESSION['total_bookings'] + $seats_filled;
+    $updated_total_bookings = $_SESSION['total_bookings'] + $total_tickets;
 
     $conn = connect();
     $stmt = $conn->prepare("UPDATE customer_login SET total_bookings = ? WHERE user_ID = ?");

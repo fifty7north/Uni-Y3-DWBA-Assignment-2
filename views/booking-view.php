@@ -17,9 +17,19 @@ class bookingView
                         <div id="right">£' . $price . '</div>
                     </div>
                     <div class="buttons">
-                        <a href="">Print</a>
-                        <a href="">Edit</a>
-                        <a href="">Delete</a>
+                        <form>
+                            <input type=submit value=Print class="submit"></input>
+                        </form>
+                        <form>
+                            <input type=submit value=Edit class="submit"></input>
+                        </form>
+                        <form method="post" action="/pages/delete-confirmation.php">
+                            <input name="booking_ID" id="hidden" value= "' . $booking_ID . '" readonly>
+                            <input name="trip_ID" id="hidden" value= "' . $trip_ID . '" readonly>
+                            <input name="tickets" id="hidden" value= "' . $tickets . '" readonly>
+                            <input name="price" id="hidden" value= "' . $price . '" readonly>
+                            <input type=submit value=Delete class="submit"></input>
+                        </form>
                     </div>
                 </div>';
     }

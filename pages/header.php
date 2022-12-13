@@ -12,7 +12,7 @@
             ?>>Book Now</a></li>
             <li><a href=<?php
             if (isset($_SESSION['user_ID'])) {
-                echo '/pages';
+                echo '/pages/my-bookings.php';
             } else {
                 echo '/pages/login.php';
             }
@@ -34,7 +34,7 @@
         echo '
         <div class="ceilidh-invite-link">
             As one of our loyal customers, we\'ve invited you to our end of season ceilidh! 
-            <a href="/pages">Click here</a>
+            <a href="/pages/invite.php">Click here</a>
             to learn more.
         </div>
         ';

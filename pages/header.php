@@ -4,14 +4,14 @@
         <ul>
             <li><a href="/index.php">Home</a></li>
             <li><a href=<?php
-            if (isset($_SESSION['username'])) {
+            if (isset($_SESSION['user_ID'])) {
                 echo '/pages/booking.php';
             } else {
                 echo '/pages/login.php';
             }
             ?>>Book Now</a></li>
             <li><a href=<?php
-            if (isset($_SESSION['username'])) {
+            if (isset($_SESSION['user_ID'])) {
                 echo '/pages';
             } else {
                 echo '/pages/login.php';
@@ -20,7 +20,7 @@
             <li><a href="/pages/itinerary.php">Itinerary</a></li>
             <li><a href="/pages/about-us.php">About</a></li>
             <?php 
-            if (isset($_SESSION['username'])) {
+            if (isset($_SESSION['user_ID'])) {
                 echo '<li><a href="/pages/logout.php">Log Out</a></li>';
             } else {
                 echo '<li><a href="/pages/login.php">Log In</a></li>';
@@ -30,7 +30,7 @@
         </ul>
     </nav>
     <?php
-    if (isset($_SESSION['username']) && ($_SESSION['total_bookings'] > 5))  {
+    if (isset($_SESSION['user_ID']) && ($_SESSION['total_bookings'] > 5))  {
         echo '
         <div class="ceilidh-invite-link">
             As one of our loyal customers, we\'ve invited you to our end of season ceilidh! 

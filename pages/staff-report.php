@@ -15,10 +15,12 @@
 
     <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/pages/header.php'); ?>
     <main>
-
         <h1>Booking Report:</h1>
-
-
+        <?php
+            include_once($_SERVER['DOCUMENT_ROOT'] . '/controllers/report-controller.php');
+                $tripController = new ReportController();
+                $tripController->invoke();
+        ?>
     </main>
     <footer>
 
